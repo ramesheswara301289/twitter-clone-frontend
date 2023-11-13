@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import { TweetService } from '../tweet.service';
+import { Tweet } from '../tweet.model';
+<!-- tweet-detail.component.html -->
+
+<div>
+    <p>{{ tweet.content }}</p> <!-- Assuming 'content' is a property in your Tweet model -->
+    <!-- Other tweet details... -->
+  
+    <!-- Include the components -->
+    <app-tweet-like [tweetId]="tweet.id"></app-tweet-like>
+    <app-tweet-comment [tweetId]="tweet.id"></app-tweet-comment>
+    <app-tweet-share [tweetId]="tweet.id"></app-tweet-share>
+  </div>
+  

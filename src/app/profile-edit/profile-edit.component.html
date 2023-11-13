@@ -1,0 +1,27 @@
+<div *ngIf="userProfile" class="profile-editing">
+  <h2>Edit Your Profile</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="userProfile.Name" required>
+    </div>
+    <div class="form-group">
+      <label for="profilePictureUrl">Profile Picture URL:</label>
+      <input type="text" id="profilePictureUrl" name="profilePictureUrl" [(ngModel)]="userProfile.ProfilePictureUrl">
+    </div>
+    <div class="form-group">
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" [(ngModel)]="userProfile.Bio"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="followers">Followers:</label>
+      <input type="number" id="followers" name="followers" [(ngModel)]="userProfile.Followers">
+    </div>
+    <div class="form-group">
+      <label for="tweets">Tweets:</label>
+      <input type="number" id="tweets" name="tweets" [(ngModel)]="userProfile.Tweets">
+    </div>
+    <!-- Add other properties as needed -->
+    <button type="submit">Save Changes</button>
+  </form>
+</div>

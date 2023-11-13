@@ -1,0 +1,13 @@
+<div *ngIf="userProfiles" class="user-profile-list">
+  <h2>Users</h2>
+  <div *ngFor="let user of userProfiles" class="user-profile-item">
+    <h3>{{ user.Name }}</h3>
+    <img [src]="user.ProfilePictureUrl" alt="Profile Picture">
+    <p>{{ user.Bio }}</p>
+    <p>Followers: {{ user.Followers }}</p>
+    <p>Tweets: {{ user.Tweets }}</p>
+    <button (click)="followUser(user.Id)">Follow</button>
+    <button (click)="unfollowUser(user.Id)">Unfollow</button>
+    <!-- Add other properties as needed -->
+  </div>
+</div>

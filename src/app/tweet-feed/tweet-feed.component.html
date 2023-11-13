@@ -1,0 +1,11 @@
+<div *ngIf="tweets" class="tweet-feed">
+  <div *ngFor="let tweet of tweets" class="tweet">
+    <div class="user-info">
+      <h3>{{ tweet.userId }}</h3>
+      <p>{{ tweet.timestamp | date }}</p>
+    </div>
+    <div class="tweet-content">
+      <p>{{ tweet.content }}</p>
+    </div>
+  </div>
+</div>
